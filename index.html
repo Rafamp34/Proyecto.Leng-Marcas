@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Koenigsegg</title>
         <link rel="stylesheet" href="./css/koeni.css">
         <link rel="shortcut icon" href="./imagenes/favi.png" type="image/x-icon">
@@ -10,21 +11,20 @@
     </head>
 <body>
         <nav id="menu" class="transparent-nav">
-        <a href="#portada">About</a>
+        <a href="#portada">Home</a>
         <a href="#Intro">Works</a>
         <a href="#Gallery">Partners</a>
         <a href="#">Price</a>
         <a href="#">Contacts</a>
         </nav>
-        
         <div id="burger-menu" class="burger-menu">
-            <button id="toggle-menu">Toggle Menu</button>
+            <button id="toggle-menu">X</button>
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
             <div id="menu-list" class="invisible-nav">
                 <!-- Incluye el mismo contenido que ya tienes para tu menú -->
-                <a href="#portada">About</a>
+                <a href="#portada">Home</a>
                 <a href="#Intro">Works</a>
                 <a href="#Gallery">Partners</a>
                 <a href="#">Price</a>
@@ -144,27 +144,42 @@
         const burgerMenu = document.getElementById("burger-menu");
         const toggleButton = document.getElementById("toggle-menu");
 
+        function adjustButtonPosition() {
+            const scrollPosition = window.scrollY;
+            toggleButton.style.top = (10 + scrollPosition) + "px"; // Ajusta según sea necesario
+        }
+
         function toggleNavVisibility() {
-            const isBeforeIntroSection = window.scrollY < introSection.offsetTop + introSection.offsetHeight;
-            menuList.classList.toggle("visible-menu", !isBeforeIntroSection);
-            menu.classList.toggle("invisible-nav", isBeforeIntroSection);
+            if (window.innerWidth >= 800) {
+                const isBeforeIntroSection = window.scrollY < introSection.offsetTop + introSection.offsetHeight;
+                menuList.classList.toggle("visible-menu", !isBeforeIntroSection);
+                menu.classList.toggle("invisible-nav", isBeforeIntroSection);
+            } else {
+                menuList.classList.remove("visible-menu");
+            }
         }
 
         function toggleButtonVisibility() {
-            toggleButton.style.display = window.innerWidth < 300 ? "block" : "none";
+            toggleButton.style.display = window.innerWidth < 800 ? "block" : "none";
         }
 
-        toggleButtonVisibility(); // Llamada inicial para establecer la visibilidad del botón
+        toggleButtonVisibility();
 
-        window.addEventListener("scroll", toggleNavVisibility);
-        window.addEventListener("resize", toggleButtonVisibility);
+        window.addEventListener("scroll", function () {
+            toggleNavVisibility();
+            adjustButtonPosition();
+        });
+
+        window.addEventListener("resize", function () {
+            toggleNavVisibility();
+            toggleButtonVisibility();
+        });
 
         toggleButton.addEventListener("click", function (event) {
-            event.stopPropagation(); // Evita que el clic en el botón se propague y cierre el menú automáticamente
+            event.stopPropagation();
             menuList.classList.toggle("visible-menu");
         });
 
-        // Ocultar el menú desplegable cuando se hace clic fuera de él
         document.addEventListener("click", function (event) {
             const isClickInsideMenu = menuList.contains(event.target) || burgerMenu.contains(event.target);
             if (!isClickInsideMenu) {
