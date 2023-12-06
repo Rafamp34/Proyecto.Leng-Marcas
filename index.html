@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Koenigsegg</title>
+        <link rel="stylesheet" href="./css/koeni.css">
+        <link rel="shortcut icon" href="./imagenes/favi.png" type="image/x-icon">
+        <script src="./js/Koeni.js"></script>
+    
+    </head>
+<body>
+    <!-- ============ HEADER =========== -->
+    <div class="back"></div>
+        <nav>
+        <a href="#portada">About</a>
+        <a href="#Intro">Works</a>
+        <a href="#Gallery">Partners</a>
+        <a href="#">Price</a>
+        <a href="#">Contacts</a>
+        </nav>
+    <section id="portada">
+        <div class="overlay">
+            <h1>Koenigsegg</h1>
+            <h3>IF COMPARABLE <br> IT IS NO LONGER KOENIGSEGG</h3>
+            <p>Immerse yourself in a world of unparalleled artistry.</p>
+            <br>
+            <a href="#Intro">
+                <button>READ MORE</button>
+            </a>
+        </div>
+    </section>
+    <section id="Intro">
+        <br><br><br><br><br>
+        <h2>Gemera</h2>
+        <div class="grid-2">
+            <div class="col-2"><p>The Gemera combines the exciting performance
+                characteristics of a mid-engine two-seater megacar with
+                the practicalities of a full four-seater car with more luggage
+                space.</p>
+                <p> <br>
+                This ground-breaking combination means that the
+                Koenigsegg megacar experience can now be shared with
+                family and friends.</p>
+                <button id="btn">Read More</button>
+            </div>
+            <div class="col-2">
+                <img src="./imagenes/gemera.png">
+            </div>
+        </div>
+        <br><br><br><br><br><br><br>
+    </section>
+    <section aria-label="Newest Photos">
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#10094;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#10095;</button>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="./imagenes/coche3.jpeg" alt="Car #1">
+                    <div class="carousel-text">
+                        <h3>Modelo 1</h3>
+                        <p>Descripción del modelo 1.</p>
+                    </div>
+                </li>
+                <li class="slide">
+                    <img src="./imagenes/coche2.jpeg" alt="Car #2">
+                    <div class="carousel-text">
+                        <h3>Modelo 2</h3>
+                        <p>Descripción del modelo 2.</p>
+                    </div>
+                </li>
+                <li class="slide">
+                    <img src="./imagenes/coche1.jpg" alt="Car #3">
+                    <div class="carousel-text">
+                        <h3>Modelo 3</h3>
+                        <p>Descripción del modelo 3.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br><br><br>
+    </section>
+    <section id="Gallery">
+    <h2>Galería 1</h2>
+        <div class="gallery">
+            <!-- Imágenes de la Galería 2 -->
+            <img src="imagen4.jpg" alt="Imagen 4">
+            <img src="imagen5.jpg" alt="Imagen 5">
+            <img src="imagen6.jpg" alt="Imagen 6">
+        </div>
+    </section>
+    <footer>
+    <p>&copy; 2023 Mi Página Web</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".slide");
+        let currentIndex = 0;
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+            slide.setAttribute("data-active", "");
+            } else {
+            slide.removeAttribute("data-active");
+            }
+        });
+        }
+        function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+        }
+        function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+        }
+        const interval = setInterval(nextSlide, 5000); // Cambia la imagen cada 5 segundos (ajusta según sea necesario)
+        document.querySelector("[data-carousel-button='prev']").addEventListener("click", () => {
+        clearInterval(interval);
+        prevSlide();
+        });
+        document.querySelector("[data-carousel-button='next']").addEventListener("click", () => {
+        clearInterval(interval);
+        nextSlide();
+        });
+    });
+    </script>
+</body>
+</html>
