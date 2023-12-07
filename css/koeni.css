@@ -385,6 +385,15 @@ footer {
   .col-2 {font-size: 1.2em;}
   .carousel-button {font-size: 2rem;}
   body{height: auto;}
+  #portada {background-size: contain;
+    height: auto;
+    background-repeat: no-repeat;}
+  #portada .overlay {padding: 20px;}
+  h1 {font-size: 40px;}
+  h2 {font-size: 30px;
+    padding: 10px;}
+  button {padding: 8px 16px;
+    margin-bottom: 30px;}
 }
 
 
