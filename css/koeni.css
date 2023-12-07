@@ -385,9 +385,12 @@ footer {
   .col-2 {font-size: 1.2em;}
   .carousel-button {font-size: 2rem;}
   body{height: auto;}
-  #portada {background-size: cover;
+  #portada {
+    background-image: url('../imagenes/fondomovil.jpg'); /* Ruta de la nueva imagen para dispositivos móviles */
+    background-size: cover;
+    background-repeat: no-repeat;
     height: auto;
-    background-repeat: no-repeat;}
+  }
   #portada .overlay {padding: 20px;}
   h1 {font-size: 40px;}
   h2 {font-size: 30px;
