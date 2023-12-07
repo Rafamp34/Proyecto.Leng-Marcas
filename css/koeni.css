@@ -9,6 +9,10 @@
   font-family: Texto1;
   src: url(../font/tomorrow/Tomorrow-Bold.ttf);
 }
+@font-face {
+  font-family: Texto2;
+  src: url(../font/new/Arizonia-Regular.ttf);
+}
 
 *{padding: 0; margin: 0; box-sizing: border-box;}
 
@@ -74,10 +78,20 @@ img {
 nav {
   width: 100%;
   position: fixed;
-  top: 50px;
   text-align: center;
   transition: background-color 0.3s;
   z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+nav.scroll-down {
+  top: 0;
+  background-color: white;
+}
+
+nav.scroll-up {
+  top: -50px; /* Ajusta el valor según sea necesario para ocultar el nav al desplazarse hacia arriba */
+  background-color: rgba(255, 255, 255, 0.7); /* Cambia el color de fondo al desplazarse hacia arriba */
 }
 .invisible-nav {
   display: none;
@@ -92,17 +106,15 @@ nav {
 }
 /* Estilos adicionales para el nav (mantiene el resto del CSS) */
 nav a {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 500;
+  padding: 10px 15px;
   text-decoration: none;
   color: #16151b;
   margin: 0 15px;
-  font-size: 16px; /* Ajusta el tamaño de la letra según sea necesario */
+  font-size: 16px;
   letter-spacing: 1px;
-  color: #333;
   position: relative;
   display: inline-block;
-  
+  z-index: 1;
 }
 nav a:before{
   content:'';
@@ -347,26 +359,115 @@ nav a:hover:before{
 .carousel-button.next {
   right: 1rem;
 }
+/*****************************************CARDS SECTION**********************************************/
 
-
-
-/*****************************************SECTION GALLERY**********************************************/
-
-.image-gallery h2 {
-  margin-bottom: 20px;
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+.card {
+  width: 300px;
+  margin: 20px;
+  background: linear-gradient(to bottom, #fdfdfd, #475747);
+  border-radius: 10px;
+  transition: transform 0.2s;
+  color: #fff;
+  overflow: hidden;
+  position: relative; /* Añadí esta propiedad */
 }
 
-.gallery img {
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  display: block;
 }
 
+.card-content {
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h3,
+.card p {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.8;
+  text-align: center;
+  margin-bottom: 10px; /* Añadir margen inferior al texto */
+}
+
+.read-more-button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.card-content .additional-text {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.8;
+  max-height: 0; /* Altura inicial cero para ocultar el texto adicional */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.card-content .additional-text.show {
+  max-height: 200px; /* Ajusta la altura máxima según sea necesario */
+  transition: max-height 0.5s ease-in-out;
+}
+/*****************************************SECTION VIDEO**********************************************/
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Texto2;
+  font-size: 100px;
+  text-align: center;
+  width: 80%;
+}
 /*****************************************FOOTER**********************************************/
 
 footer {

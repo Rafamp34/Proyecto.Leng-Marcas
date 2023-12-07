@@ -87,3 +87,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+function toggleText(button) {
+    const content = button.nextElementSibling; // Obtener el siguiente elemento (en este caso, el párrafo adicional)
+
+    // Alternar la clase 'show' para mostrar u ocultar el contenido solo en esta card específica
+    content.classList.toggle('show');
+
+    // Obtener todas las cards, excepto la actual
+    const allCards = document.querySelectorAll('.card');
+    allCards.forEach(card => {
+        if (card !== button.closest('.card')) {
+            // Ocultar el texto adicional en las otras cards
+            card.querySelector('.additional-text').classList.remove('show');
+        }
+    });
+}
+
+
+// Obtén el elemento del nav
+var nav = document.querySelector('nav');
+
+// Guarda la posición de desplazamiento anterior
+var lastScrollTop = 0;
+
+// Función que se ejecuta al desplazarse
+window.addEventListener('scroll', function() {
+    // Obtén la posición de desplazamiento actual
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    // Verifica la dirección del desplazamiento
+    if (scrollTop > lastScrollTop) {
+        // Desplazándose hacia abajo
+        nav.classList.remove('scroll-up');
+        nav.classList.add('scroll-down');
+    } else {
+        // Desplazándose hacia arriba
+        nav.classList.remove('scroll-down');
+        nav.classList.add('scroll-up');
+    }
+
+    // Actualiza la posición de desplazamiento anterior
+    lastScrollTop = scrollTop;
+});

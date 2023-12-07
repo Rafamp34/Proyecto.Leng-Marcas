@@ -97,13 +97,42 @@
         </div>
         <br><br><br>
     </section>
-    <section id="Gallery">
-    <h2>Galería 1</h2>
-        <div class="gallery">
-            <!-- Imágenes de la Galería 2 -->
-            <img src="imagen4.jpg" alt="Imagen 4">
-            <img src="imagen5.jpg" alt="Imagen 5">
-            <img src="imagen6.jpg" alt="Imagen 6">
+    <section>
+        <div class="card-container">
+            <div class="card">
+                <img src="./imagenes/card1.jpeg" alt="Car 1">
+                <div class="card-content">
+                    <h3>Agera RS</h3>
+                    <p>El Agera RS es lo último en versatilidad en carretera y pista. Él ofrece un rendimiento extremo y es totalmente legal en carretera.</p>
+                    <button class="read-more-button" onclick="toggleText(this)">Leer más</button>
+                    <p class="additional-text">Utiliza avanzado tecnología desarrollada durante nuestro Koenigsegg One:1 programa manteniendo toda la funcionalidad del S anterior y modelos R. <br><br>Algunas características prácticas heredadas del programa Agera R y S incluyen un compartimiento de equipaje utilizable y un techo rígido desmontable que se puede guardar internamente para conducir con la capota hacia abajo en cualquier momento.</p>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="./imagenes/card3.jpeg" alt="Car 2">
+                <div class="card-content">
+                    <h3>Gemera</h3>
+                    <p>Cada elemento de la superficie está construido para reducir la resistencia o turbulencia circundante mientras aumenta la alta velocidad estabilidad. </p>
+                    <button class="read-more-button" onclick="toggleText(this)">Leer más</button>
+                    <p class="additional-text">Tan potente como su hermano centrado en la pista, el Jesko Absolut es el más fluido y sigiloso de los dos. <br><br>El Jesko Absolut estará propulsado por un motor V8 biturbo de 1.280 CV (1.600 CV en el E85), con el cigüeñal V8 más ligero del mundo, que pesa sólo 12,5 kg.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./imagenes/card2.jpeg" alt="Car 2">
+                <div class="card-content">
+                    <h3>Jesko Absolut</h3>
+                    <p>La Gemera combina el emocionante rendimiento características de un megacoche biplaza con motor central... </p>
+                    <button class="read-more-button" onclick="toggleText(this)">Leer más</button>
+                    <p class="additional-text"> y los aspectos prácticos de un coche completo de cuatro plazas con más equipaje. <br><br>Esta combinación innovadora significa que el La experiencia del megaauto Koenigsegg ahora se puede compartir con familiares y amigos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="video-section">
+        <video src="./videos/videocoche.mp4" autoplay muted loop playsinline></video>
+        <div class="overlay-text">
+            <p>Koenigsegg</p>
         </div>
     </section>
     <footer>
