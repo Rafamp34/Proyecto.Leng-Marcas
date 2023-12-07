@@ -13,9 +13,9 @@
         <nav id="menu" class="transparent-nav">
         <a href="#portada">Home</a>
         <a href="#Intro">Explore</a>
-        <a href="#Gallery">MegaCars</a>
-        <a href="#">Price</a>
-        <a href="#">Contacts</a>
+        <a href="#carrusel">MegaCars</a>
+        <a href="#cards">Models</a>
+        <a href="#video">Video</a>
         </nav>
         <div id="burger-menu" class="burger-menu">
             <button id="toggle-menu">
@@ -28,9 +28,9 @@
                 <!-- Incluye el mismo contenido que ya tienes para tu menú -->
                 <a href="#portada">Home</a>
                 <a href="#Intro">Explore</a>
-                <a href="#carrousel">MegaCars</a>
-                <a href="#">Price</a>
-                <a href="#">Contacts</a>
+                <a href="#carrusel">MegaCars</a>
+                <a href="#cards">Models</a>
+                <a href="#video">Video</a>
                 <a href="#portada">
                     <img src="./imagenes/logo.png" alt="Logo" class="menu-logo">
                 </a>
@@ -67,7 +67,7 @@
         </div>
         <br><br><br><br><br><br><br>
     </section>
-    <section class="carrousel">
+    <section id="carrusel" class="carrousel">
         <div class="carousel" data-carousel>
             <button class="carousel-button prev" data-carousel-button="prev">&#10094;</button>
             <button class="carousel-button next" data-carousel-button="next">&#10095;</button>
@@ -97,7 +97,9 @@
         </div>
         <br><br><br>
     </section>
-    <section>
+    <section id="cards">
+            <p id="p1">MODELOS E INFORMACION</p>
+        
         <div class="card-container">
             <div class="card">
                 <img src="./imagenes/card1.jpeg" alt="Car 1">
@@ -129,7 +131,7 @@
             </div>
         </div>
     </section>
-    <section class="video-section">
+    <section id="video" class="video-section">
         <video src="./videos/videocoche.mp4" autoplay muted loop playsinline></video>
         <div class="overlay-text">
             <p>Koenigsegg</p>

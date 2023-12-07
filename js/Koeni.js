@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/************************************************************************************************/
+/***************************************FUNCION PARA EL MENU*********************************************************/
 document.addEventListener("DOMContentLoaded", function () {
     const introSection = document.getElementById("portada");
     const menu = document.getElementById("menu");
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
+/************************************FUNCION DE LEER MAS************************************************/
 function toggleText(button) {
     const content = button.nextElementSibling; // Obtener el siguiente elemento (en este caso, el párrafo adicional)
 
@@ -106,28 +106,3 @@ function toggleText(button) {
 }
 
 
-// Obtén el elemento del nav
-var nav = document.querySelector('nav');
-
-// Guarda la posición de desplazamiento anterior
-var lastScrollTop = 0;
-
-// Función que se ejecuta al desplazarse
-window.addEventListener('scroll', function() {
-    // Obtén la posición de desplazamiento actual
-    var scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    // Verifica la dirección del desplazamiento
-    if (scrollTop > lastScrollTop) {
-        // Desplazándose hacia abajo
-        nav.classList.remove('scroll-up');
-        nav.classList.add('scroll-down');
-    } else {
-        // Desplazándose hacia arriba
-        nav.classList.remove('scroll-down');
-        nav.classList.add('scroll-up');
-    }
-
-    // Actualiza la posición de desplazamiento anterior
-    lastScrollTop = scrollTop;
-});
