@@ -38,11 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /***************************************FUNCION PARA EL MENU*********************************************************/
 document.addEventListener("DOMContentLoaded", function () {
-    const introSection = document.getElementById("portada");
+    const portada = document.getElementById("portada");
     const menu = document.getElementById("menu");
     const menuList = document.getElementById("menu-list");
     const burgerMenu = document.getElementById("burger-menu");
     const toggleButton = document.getElementById("toggle-menu");
+
+    const MENU_APPEAR_OFFSET = 50; // Ajusta según sea necesario
 
     function adjustButtonPosition() {
         const scrollPosition = window.scrollY;
@@ -50,10 +52,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function toggleNavVisibility() {
+        const portadaHeight = portada.offsetHeight;
+        const windowTop = window.scrollY;
+        const portadaBottom = portada.offsetTop + portadaHeight;
+
         if (window.innerWidth >= 800) {
-            const isBeforeIntroSection = window.scrollY < introSection.offsetTop + introSection.offsetHeight;
-            menuList.classList.toggle("visible-menu", !isBeforeIntroSection);
-            menu.classList.toggle("invisible-nav", isBeforeIntroSection);
+            const isPastPortada = windowTop > portadaBottom;
+            const isMenuVisible = windowTop > portadaBottom - MENU_APPEAR_OFFSET;
+
+            menuList.classList.toggle("visible-menu", isMenuVisible);
+            menu.classList.toggle("invisible-nav", !isPastPortada);
+
+            if (isMenuVisible) {
+                menuList.style.top = `-${portadaHeight - MENU_APPEAR_OFFSET}px`;
+            } else {
+                menuList.style.top = `-${portadaHeight}px`;
+            }
         } else {
             menuList.classList.remove("visible-menu");
         }
@@ -104,5 +118,8 @@ function toggleText(button) {
         }
     });
 }
+
+
+  
 
 

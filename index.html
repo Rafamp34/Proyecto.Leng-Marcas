@@ -5,17 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Koenigsegg</title>
         <link rel="stylesheet" href="css/koeni.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="./imagenes/favi.png" type="image/x-icon">
         <script src="js/Koeni.js"></script>
     
     </head>
 <body>
         <nav id="menu" class="transparent-nav">
-        <a href="#portada">Home</a>
-        <a href="#Intro">Explore</a>
-        <a href="#carrusel">MegaCars</a>
-        <a href="#cards">Models</a>
-        <a href="#video">Video</a>
+            <a href="#portada">Home</a>
+            <a href="#Intro">Explore</a>
+            <a href="#carrusel">MegaCars</a>
+            <a href="#cards">Models</a>
+            <a href="#video">Video</a>
         </nav>
         <div id="burger-menu" class="burger-menu">
             <button id="toggle-menu">
@@ -36,19 +37,14 @@
                 </a>
             </div>
         </div>
-    <section id="portada">
-        <div class="overlay">
-            <h1>Koenigsegg</h1>
-            <h3>IF COMPARABLE <br> IT IS NO LONGER KOENIGSEGG</h3>
-            <p>Immerse yourself in a world of unparalleled artistry.</p>
-            <br>
-            <a href="#Intro">
-                <button>READ MORE</button>
-            </a>
-        </div>
-    </section>
+        <section id='portada'>
+            <div class="content">
+                <h2>Koenigsegg</h2>
+                <h3>IF COMPARABLE <br>IT IS NO LONGER BUGATTI</h3>
+            </div>
+        </section>
     <section id="Intro">
-        <br><br><br><br><br>
+        <br><br><br><br><br><br>
         <h2>Gemera</h2>
         <div class="grid-2">
             <div class="col-2"><p>The Gemera combines the exciting performance
@@ -137,8 +133,58 @@
             <p>Koenigsegg</p>
         </div>
     </section>
-    <footer>
-    <p>&copy; 2023 Mi Página Web</p>
+    <footer class="footer-distributed">
+        <div class="footer-right">
+            <a href="https://youtube.com"><i class="fa fa-youtube"></i></a>
+            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="https://linkedin.com"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="footer-left">
+            <p class="footer-links">
+                <a class="link-1" href="#portada">Home</a>
+                <a href="#Intro">Explore</a>
+                <a href="#carrusel">MegaCars</a>
+                <a href="#cards">Models</a>
+                <a href="#video">Video</a>
+            </p>
+            <p>Rafael Moncayo Pérez &copy; 2023</p>
+        </div>
     </footer>
+    <script>
+        (function() {
+            // Variables
+            var $curve = document.getElementById("curve");
+            var last_known_scroll_position = 0;
+            var defaultCurveValue = 350;
+            var curveRate = 3;
+            var ticking = false;
+            var curveValue;
+        
+            // Handle the functionality
+            function scrollEvent(scrollPos) {
+            if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
+                curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
+                $curve.setAttribute(
+                "d",
+                "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z"
+                );
+            }
+            }
+        
+            window.addEventListener("scroll", function(e) {
+            last_known_scroll_position = window.scrollY;
+        
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                scrollEvent(last_known_scroll_position);
+                ticking = false;
+                });
+            }
+        
+            ticking = true;
+            });
+        })();
+    </script>
 </body>
 </html>
