@@ -4,7 +4,7 @@
 /*                        version: 1.0                                             */
 /*                        Comments: Project for Leng.Marcas-1ºDam                  */
 /***********************************************************************************/
-
+/***************************************FUNCION PARA EL SLIDER*********************************************************/
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
     let currentIndex = 0;
