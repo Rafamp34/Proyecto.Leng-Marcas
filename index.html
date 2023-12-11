@@ -26,7 +26,7 @@
             <div class="bar"></div>
             <div class="bar"></div>
             <div id="menu-list" class="invisible-nav">
-                <!-- Incluye el mismo contenido que ya tienes para tu menú -->
+                <!-- Incluir el mismo contenido que ya tienes para este menu -->
                 <a href="#portada">Home</a>
                 <a href="#Intro">Explore</a>
                 <a href="#carrusel">MegaCars</a>
@@ -152,8 +152,9 @@
         </div>
     </footer>
     <script>
+        // FUNCTION para la curva de la portada
         (function() {
-            // Variables
+        
             var $curve = document.getElementById("curve");
             var last_known_scroll_position = 0;
             var defaultCurveValue = 350;
@@ -161,7 +162,6 @@
             var ticking = false;
             var curveValue;
         
-            // Handle the functionality
             function scrollEvent(scrollPos) {
             if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
                 curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
