@@ -139,6 +139,7 @@
             <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
             <a href="https://linkedin.com"><i class="fa fa-linkedin"></i></a>
             <a href="https://github.com"><i class="fa fa-github"></i></a>
+            <button id="openPopupButton">Disclaimer</button>
         </div>
         <div class="footer-left">
             <p class="footer-links">
@@ -152,39 +153,27 @@
         </div>
     </footer>
     <script>
-        // FUNCTION para la curva de la portada
-        (function() {
-        
-            var $curve = document.getElementById("curve");
-            var last_known_scroll_position = 0;
-            var defaultCurveValue = 350;
-            var curveRate = 3;
-            var ticking = false;
-            var curveValue;
-        
-            function scrollEvent(scrollPos) {
-            if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
-                curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
-                $curve.setAttribute(
-                "d",
-                "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z"
-                );
-            }
-            }
-        
-            window.addEventListener("scroll", function(e) {
-            last_known_scroll_position = window.scrollY;
-        
-            if (!ticking) {
-                window.requestAnimationFrame(function() {
-                scrollEvent(last_known_scroll_position);
-                ticking = false;
-                });
-            }
-        
-            ticking = true;
+        function openPopup() {
+            var popupDiv = document.createElement("div");
+            popupDiv.classList.add("popup");
+
+            popupDiv.innerHTML += "<p><b>Nota:</b> Las imágenes y otros contenidos relacionados con mi página WEB han sido sacado de Koenigsegg y W3Schools y han sido utilizados solo con fines educativos y demostrativos. Todos los derechos de propiedad intelectual pertenecen a sus respectivos propietarios.</p>";
+
+            var closePopupButton = document.createElement("button");
+            closePopupButton.innerHTML = "Cerrar Ventana";
+            closePopupButton.classList.add("close-popup-button");
+
+            closePopupButton.addEventListener("click", function () {
+                document.body.removeChild(popupDiv);
             });
-        })();
+
+            popupDiv.appendChild(closePopupButton);
+
+            document.body.appendChild(popupDiv);
+        }
+
+        var openPopupButton = document.getElementById("openPopupButton");
+        openPopupButton.addEventListener("click", openPopup);
     </script>
 </body>
 </html>
