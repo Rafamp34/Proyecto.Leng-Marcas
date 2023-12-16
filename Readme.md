@@ -29,7 +29,9 @@ La elección de Koenigsegg como tema del proyecto se basa en la fascinación por
 ## 3. Estructura del Proyecto
 ### 3.1 Hero Section
 La sección inicial presenta una imagen de fondo dinámica que encapsula la esencia de Koenigsegg. Un llamado a la acción invita a los visitantes a explorar más sobre la marca. La imagen de fondo es adaptable a diferentes dispositivos para garantizar una experiencia visualmente atractiva.
-
+<p align="center">
+  <img src="./imagenes/imagenhero" alt="Hero Section">
+</p>
 ### 3.2 Introducción
 Esta sección presenta el modelo Gemera, destacando sus características únicas mediante un diseño de cuadrícula de dos columnas que combina imágenes y texto descriptivo.
 
