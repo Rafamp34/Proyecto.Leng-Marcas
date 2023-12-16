@@ -578,7 +578,42 @@ nav a:hover:before{
 
 .footer-distributed p.footer-links a:hover{text-decoration:underline;}
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+}
 
+.popup p {
+  margin: 0;
+  text-align: center; /* Centra el texto dentro de la ventana */
+}
+
+.close-popup-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.close-popup-button:hover {
+  background-color: #333;
+  color: #fff;
+}
 /*****************************************Media Queries**********************************************/
 @media only screen and (width<800px) {
   h1 {font-size: 50px;}
