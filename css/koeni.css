@@ -18,28 +18,6 @@
 
 body{height: 900px;}
 
-#portada {
-	background: url('../imagenes/portada.png');
-	text-align: center;
-  background-position: center;
-	width: 100%;
-	height: auto;
-  position: relative;
-	background-size: cover;
-	background-attachment: fixed;
-	position: relative;
-	overflow: hidden;
-	border-radius: 0 0 105% 85% / 30%;
-}
-#portada .overlay{
-	width: 100%;
-	height: 100%;
-	padding: 50px;
-	color: #FFF;
-	text-shadow: 1px 1px 1px #333;
-	
-}
-
 h1 {
 	font-family: 'Dancing Script', cursive;
 	font-size: 80px;
@@ -255,16 +233,19 @@ nav a:hover:before{
 /*****************************************HEADER SECTION**********************************************/
 
 #portada {
+  background-image: url(../imagenes/portadaresponsi.png);
+  text-align: center;
+  background-position: center;
+  width: 100%;
+  height: 80%;
   position: relative;
-  width:100%;
-  height:100vh;
-  background:url("../imagenes/portada.png");
-  background-size:cover;
-  background-attachment:fixed;
+  background-size: cover;
   display:flex;
+  background-attachment: fixed; /* Esta propiedad fija la imagen de fondo */
+  overflow: hidden;
   justify-content: center;
   align-items: center;
-  clip-path:circle(180vh at 50% -80vh);
+  border-radius: 0 0 105% 85% / 30%;
 }
 #portada .content{
   max-width:1000px;
