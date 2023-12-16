@@ -16,9 +16,10 @@
    4.2 [Tipografías](#42-tipografías)
    4.3 [Imágenes](#43-imágenes)
    4.4 [Videos](#44-videos)
-   4.5 [Code Snippets](#45-code-snippets)
-5. [Trabajo Realizado en Clase](#5-trabajo-realizado-en-clase)
-6. [Licencia](#6-licencia)
+   4.5 [Funciones](#45-code-snippets)
+   4.6 [Code Snippets](#46-code-snippets)
+6. [Trabajo Realizado en Clase](#5-trabajo-realizado-en-clase)
+7. [Licencia](#6-licencia)
 ![Koenigsegg Logo](./imagenes/logo.png)
 ## 1. Introducción
 Este proyecto consiste en la creación de un sitio web dedicado a la marca de automóviles de lujo Koenigsegg. El objetivo es proporcionar a los visitantes una experiencia inmersiva y emocionante al explorar la gama de modelos, características y la historia detrás de esta prestigiosa marca siendo esta una pagina TRIBUTE a la marca.
