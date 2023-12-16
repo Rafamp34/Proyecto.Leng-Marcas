@@ -10,7 +10,7 @@
    3.3 [Carrusel](#33-carrusel)
    3.4 [Cards](#34-cards)
    3.5 [Sección de Video](#35-sección-de-video)
-   3.6 [Pie de Página](#36-pie-de-página)
+   3.6 [Footer](#36-pie-de-página)
 4. [Estilo de la Página](#4-estilo-de-la-página)
    4.1 [Paleta de Colores](#41-paleta-de-colores)
    4.2 [Tipografías](#42-tipografías)
