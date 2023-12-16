@@ -32,26 +32,31 @@ La sección inicial presenta una imagen de fondo dinámica que encapsula la esen
 <p align="center">
   <img src="./imagenes/imagenhero" alt="Hero Section">
 </p>
+
 ### 3.2 Introducción
 Esta sección presenta el modelo Gemera, destacando sus características únicas mediante un diseño de cuadrícula de dos columnas que combina imágenes y texto descriptivo.
 <p align="center">
   <img src="./imagenes/imagenIntro" alt="Intro">
 </p>
+
 ### 3.3 Carrusel de Modelos
 Un carrusel de imágenes ofrece una vista detallada de varios modelos de automóviles Koenigsegg. Cada imagen se presenta con un texto descriptivo para resaltar las características clave de cada modelo.
 <p align="center">
   <img src="./imagenes/imagencarrusell" alt="Carrusel">
 </p>
+
 ### 3.4 Tarjetas Informativas
 Tarjetas interactivas proporcionan detalles específicos sobre modelos destacados como el Agera RS, el Gemera y el Jesko Absolut. Los botones "Leer más" revelan información adicional para una experiencia de usuario más completa.
 <p align="center">
   <img src="./imagenes/imagenmodelos" alt="Modelos">
 </p>
+
 ### 3.5 Sección de Video
 Una sección dinámica presenta un video de fondo que ilustra la emoción y la potencia de los automóviles Koenigsegg. El texto superpuesto ofrece una marca distintiva y un llamado a la acción.
 <p align="center">
   <img src="./imagenes/imagenvideo" alt="Video">
 </p>
+
 ### 3.6 Pie de Página
 El pie de página contiene enlaces a redes sociales y proporciona una navegación rápida hacia las diversas secciones del sitio. La información de derechos de autor se presenta de manera prominente.
 <p align="center">
