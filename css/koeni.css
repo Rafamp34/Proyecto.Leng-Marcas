@@ -233,7 +233,7 @@ nav a:hover:before{
 /*****************************************HEADER SECTION**********************************************/
 
 #portada {
-  background-image: url(../imagenes/portadaresponsi.png);
+  background-image: url(../imagenes/portada.png);
   text-align: center;
   background-position: center;
   width: 100%;
@@ -241,7 +241,7 @@ nav a:hover:before{
   position: relative;
   background-size: cover;
   display:flex;
-  background-attachment: fixed; /* Esta propiedad fija la imagen de fondo */
+  background-attachment: fixed; 
   overflow: hidden;
   justify-content: center;
   align-items: center;
@@ -602,8 +602,8 @@ nav a:hover:before{
   .grid-2 {grid-template-columns: auto;}
   .col-2 {font-size: 1.2em;}
   .carousel-button {font-size: 2rem;}
-  body{height: auto;}
-  #portada {background-image: url('../imagenes/fondomovil.jpg');} 
+  #portada {background-image: url('../imagenes/fondomovil.jpg');
+     height: 60%;} 
   h1 {font-size: 40px;}
   h2 {font-size: 30px;
     padding: 10px;}
