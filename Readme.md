@@ -76,7 +76,23 @@ Las imágenes utilizadas se han seleccionado cuidadosamente para destacar la bel
 ### 4.4 Videos
 El video de fondo en la sección de video ha sido elegido para ver mas en detalle los coches de la marca. Esta section contiene reproducción automática, un bucle y la reproducción silenciosa se utilizan para mejorar la experiencia del usuario.
 
-### 4.5 Code Snippets
+### 4.5 Funciones
+   1. Carrusel de Imágenes
+   El programa incluye un carrusel de imágenes en la sección "MegaCars" que muestra varios modelos de automóviles Koenigsegg. La funcionalidad del carrusel se implementa con JavaScript     y permite la navegación automática y manual entre las imágenes.
+
+   2. Menú de Navegación
+   El menú de navegación permite a los usuarios desplazarse fácilmente a diferentes secciones de la página. Al hacer clic en los elementos del menú, la página se desplaza suavemente a      la sección correspondiente. Además, hay un menú de hamburguesa para dispositivos móviles.
+   
+   3. Leer Más
+   En la sección "Models", cada tarjeta de automóvil tiene un botón "Leer Más". Al hacer clic en este botón, se muestra información adicional sobre el modelo correspondiente. Si el         usuario hace clic en otro botón "Leer Más", se oculta la información adicional en la tarjeta actual y se muestra en la nueva tarjeta.
+   
+   4. Reproducción de Video
+   La sección "Video" contiene un video de un automóvil Koenigsegg en acción. El video se reproduce en bucle y está configurado para reproducirse automáticamente sin sonido.
+   
+   5. Menú de Redes Sociales y Descargo de Responsabilidad
+   En el pie de página, hay enlaces a las redes sociales de Koenigsegg, como YouTube, Twitter, LinkedIn y GitHub. También hay un botón "Disclaimer" que, al hacer clic, muestra un popup     con un descargo de responsabilidad sobre el uso de imágenes y contenido en la página.
+
+### 4.6 Code Snippets
 Se han incorporado varios fragmentos de código, como la barra de navegación fija que lo hemos utilizado en parte de W3School(https://www.w3schools.com) y apartae de utilizar W3School hemos mejorado la barra nosotros mismos, el carrusel de imágenes  han sido seleccionado de la pagina anterior tambien y tambien nosotros la hemos retocado para adaptarla a nuestro sitio web y las tarjetas interactivas o Cards por ultimo que tambien nos hemos ayudado de W3School. Otra cosa que hemos utilizado ha sido los codigos de JAVASCRIPT que lo hemos sacado de  W3School y aparte de codepen mezclando los dos para consegir lo que queremos. Estos se han adaptado y personalizado para que se adapte lo mejor posible.
 
 ## 5. Trabajo Realizado en Clase
