@@ -57,6 +57,7 @@ El pie de página contiene enlaces a redes sociales y proporciona una navegació
 <p align="center">
   <img src="./imagenes/imagenfooter" alt="Footer">
 </p>
+
 ## 4. Estilo de la Página
 ### 4.1 Paleta de Colores
 La paleta de colores ha sido seleccionada para reflejar la elegancia y modernidad asociadas con Koenigsegg. Tonos oscuros se combinan con acentos vibrantes para crear un contraste visualmente atractivo.
